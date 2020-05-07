@@ -1,3 +1,5 @@
+require 'pg'
+
 class Diary_entry 
 
   def self.all

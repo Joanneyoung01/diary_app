@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/diary_entry'
 
 class Diary_App < Sinatra::Base
   get '/' do

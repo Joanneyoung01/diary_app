@@ -6,9 +6,9 @@ feature 'Viewing entries' do
     connection = PG.connect(dbname: 'diary_test')
 
     # Add the test data
-    connection.exec("INSERT INTO diary_entries (title) VALUES ('day one');")
-    connection.exec("INSERT INTO diary_entries (title) VALUES ('day two');")
-    connection.exec("INSERT INTO diary_entries (title) VALUES ('day three');")
+    Diary_entry.create(title: "day one")
+    Diary_entry.create(title: "day two")
+    Diary_entry.create(title: "day three")
 
     visit('/diary')
 
