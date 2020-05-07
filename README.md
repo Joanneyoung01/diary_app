@@ -76,3 +76,9 @@ Home page  ||
 Diary/new  || Add new diary entry
 
 Diary      || View all 
+
+
+Connect to psql
+Create the database using the psql command CREATE DATABASE bookmark_manager;
+Connect to the database using the pqsl command \c bookmark_manager;
+Run the query we have saved in the file 1. Setting up database
