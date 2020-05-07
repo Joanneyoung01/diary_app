@@ -110,4 +110,13 @@ RSpec.configure do |config|
 
   # Tell Capybara to talk to BookmarkManager
   Capybara.app = Diary_App
+
+  # set up test environment
+  require_relative './setup_test_database'
+
+  RSpec.configure do |config|
+    config.before(:each) do
+      setup_test_database
+    end
+  end
 end
