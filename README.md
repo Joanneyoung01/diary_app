@@ -69,3 +69,10 @@ Could Have
 As a user
 So that I can make entries easier to browse
 I want to be able to add Tags to an Entry
+
+
+Home page  || 
+
+Diary/new  || Add new diary entry
+
+Diary      || View all 
