@@ -7,6 +7,7 @@ class Diary_App < Sinatra::Base
 
   #view all entries
   get '/diary' do
+    @entries = Diary_entry.all
     erb :"diary/index"
   end
 
@@ -18,9 +19,7 @@ class Diary_App < Sinatra::Base
   #post a new entry, send to all entries page
   post '/diary' do
     p params
-    @title = params['title']
-    connection = PG.connect(dbname: 'diary_test')
-    connection.exec("INSERT INTO diary_entries (title) VALUES('#{@title}')")
+    Diary_entry.create(title: params[:title])
     redirect '/diary'
   end
 
